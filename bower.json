@@ -1,0 +1,16 @@
+{
+  "name": "ngLoader",
+  "main": "ngLoader.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jfeigel/ngLoader",
+  "authors": [
+    "James Feigel <james.feigel@gmail.com>"
+  ],
+  "description": "AngularJS Loading animation",
+  "keywords": [
+    "AngularJS",
+    "SVG",
+    "Loading"
+  ],
+  "license": "MIT"
+}
