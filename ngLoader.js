@@ -240,7 +240,17 @@ angular.module('ngLoader', ['ngLoaderTemplates'])
       restrict: 'AE',
       replace: true,
       templateUrl: function(tElem, tAttrs) {
-        if (tAttrs.template !== undefined) return 'template/ngLoader/ngLoaderTemplate' + tAttrs.template + '.html';
+        if (tAttrs.template !== undefined) {
+          if (isNaN(parseInt(tAttrs.template))) {
+            console.error('Directive Error! Attribute \'template\' must be a number. Found \'' + tAttrs.template + '\'');
+          }
+          else if (parseInt(tAttrs.template) < 1 || parseInt(tAttrs.template) > 8) {
+            console.error('Directive Error! Attribute \'template\' must be a number between 1 and 8. Found \'' + tAttrs.template + '\'');
+          }
+          else {
+            return 'template/ngLoader/ngLoaderTemplate' + tAttrs.template + '.html';
+          }
+        }
         return 'template/ngLoader/ngLoaderTemplate1.html';
       },
       link: function(scope, elem, attrs) {
@@ -249,6 +259,10 @@ angular.module('ngLoader', ['ngLoaderTemplates'])
             'background': 'rgba(240,240,240,0.25)',
             'z-index': '9999'
           });
+        }
+        else if (attrs.disableBackground === undefined) {}
+        else {
+          console.error('Directive Error! Attribute \'disable-background\' must be \'true\' for \'false\'. Found \'' + attrs.disableBackground + '\'');
         }
         var content = elem.find('div')[0];
         $timeout(function() {
