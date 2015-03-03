@@ -12,5 +12,6 @@
     "SVG",
     "Loading"
   ],
+  "ignore": [],
   "license": "MIT"
 }
