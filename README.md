@@ -60,3 +60,6 @@ Only the `working` attribute is required.
 | disable-background | _false_                  | true or false            |
 | message            | _undefined_              | Any string               |
 | template           | _1_                      | Any number 1-8           |
+
+## Notes
+Styles of the loader can be updated / modified by targeting the `loader-content` class.
