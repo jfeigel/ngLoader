@@ -17,6 +17,12 @@ angular.module('app',['ngLoader']);
 ```
 
 ##### 3. Include the CSS file in your HTML file or import it in your CSS
+```HTML
+<link rel="stylesheet" href="/bower_components/ngLoader/ngLoader.min.css">
+```
+
+OR
+
 ```CSS
 @import "bower_components/ngLoader/ngLoader.min.css";
 ```
