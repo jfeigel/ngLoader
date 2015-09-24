@@ -3,7 +3,7 @@ Loading animation for AngularJS
 
 Used the SVG loading animations from <a href="http://codepen.io/aurer/pen/jEGbA">this Pen</a> by <a href="http://codepen.io/aurer/">Aurer</a>.
 
-This module can be used in any version of Angular (see the Plunk below). All major browsers, except IE, are <a href="http://caniuse.com/#feat=svg-smil">supported</a>.
+This module can be used in any version of Angular (see the Plunk below). All major browsers, except IE, are supported. Template 1, the default and now using CSS animations, is <a href="http://caniuse.com/#feat=css-animation">supported in IE10+</a> and the other templates are <a href="http://caniuse.com/#feat=svg-smil">not supported in IE</a>.
 
 
 ##### 1. Install the module via bower.
@@ -16,13 +16,17 @@ bower install ng-loaders
 angular.module('app',['ngLoader']);
 ```
 
+##### 3. Include the CSS file in your HTML file or import it in your CSS
+```CSS
+@import "bower_components/ngLoader/ngLoader.min.css";
+```
 
-##### 3. Include the file in your html file
+##### 4. Include the JS file in your HTML file
 ```HTML
 <script src="bower_components/ngLoader/ngLoader.min.js"></script>
 ```
 
-##### 4. Add the loader in your view and ensure the corresponding scope variable is defined
+##### 5. Add the loader in your view and ensure the corresponding scope variable is defined
 ```HTML
 <loader
 	working="scopeVariable"
@@ -59,7 +63,7 @@ Only the `working` attribute is required.
 | working            | _name of scope variable_ | Any valid scope variable |
 | disable-background | _false_                  | true or false            |
 | message            | _undefined_              | Any string               |
-| template           | _1_                      | Any number 1-8           |
+| template           | _9_                      | Any number 1-9           |
 
 ## Notes
 Styles of the loader can be updated / modified by targeting the `loader-content` class.

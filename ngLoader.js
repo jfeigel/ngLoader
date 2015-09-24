@@ -1,9 +1,9 @@
 /**!
  * AngularJS Loader animation
  * @author  James Feigel <james.feigel@gmail.com>
- * @version 0.1.0
+ * @version 0.2.0
  */
-angular.module('ngLoaderTemplates', ['template/ngLoader/ngLoaderTemplate1.html', 'template/ngLoader/ngLoaderTemplate2.html', 'template/ngLoader/ngLoaderTemplate3.html', 'template/ngLoader/ngLoaderTemplate4.html', 'template/ngLoader/ngLoaderTemplate5.html', 'template/ngLoader/ngLoaderTemplate6.html', 'template/ngLoader/ngLoaderTemplate7.html', 'template/ngLoader/ngLoaderTemplate8.html']);
+angular.module('ngLoaderTemplates', ['template/ngLoader/ngLoaderTemplate1.html', 'template/ngLoader/ngLoaderTemplate2.html', 'template/ngLoader/ngLoaderTemplate3.html', 'template/ngLoader/ngLoaderTemplate4.html', 'template/ngLoader/ngLoaderTemplate5.html', 'template/ngLoader/ngLoaderTemplate6.html', 'template/ngLoader/ngLoaderTemplate7.html', 'template/ngLoader/ngLoaderTemplate8.html', 'template/ngLoader/ngLoaderTemplate9.html']);
 
 angular.module('template/ngLoader/ngLoaderTemplate1.html', []).run(['$templateCache',
   function($templateCache) {
@@ -227,6 +227,20 @@ angular.module('template/ngLoader/ngLoaderTemplate8.html', []).run(['$templateCa
       "  </div>\n" +
       "</div>");
 }]);
+angular.module('template/ngLoader/ngLoaderTemplate9.html', []).run(['$templateCache',
+  function($templateCache) {
+    $templateCache.put('template/ngLoader/ngLoaderTemplate9.html',
+      "<div class=\"loader\" data-ng-show=\"working\" style=\"position: absolute;top: 0px;bottom: 0px;left: 0px;right: 0px;height: 100% !important;width: 100% !important;\">\n" +
+      "  <div class=\"loader-content\" style=\"position: absolute;top: 50%;left: 50%;line-height: 1;max-width: 50%;padding: 7px;-o-border-radius: 5px;border-radius: 5px;background-color: rgba(0, 0, 0, 0.5);color: #ffffff;text-transform: uppercase;text-align: center;word-break: break-word;z-index: 1;\">\n" +
+      "    <div class=\"loader-bars\">\n" +
+      "      <span class=\"bar1 bar\"></span>\n" +
+      "      <span class=\"bar2 bar\"></span>\n" +
+      "      <span class=\"bar3 bar\"></span>\n" +
+      "    </div>\n" +
+      "    <p style=\"margin: 2px 0px;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "  </div>\n" +
+      "</div>");
+}]);
 
 angular.module('ngLoader', ['ngLoaderTemplates'])
 .directive('loader', ['$timeout',
@@ -244,31 +258,37 @@ angular.module('ngLoader', ['ngLoaderTemplates'])
           if (isNaN(parseInt(tAttrs.template))) {
             console.error('Directive Error! Attribute \'template\' must be a number. Found \'' + tAttrs.template + '\'');
           }
-          else if (parseInt(tAttrs.template) < 1 || parseInt(tAttrs.template) > 8) {
-            console.error('Directive Error! Attribute \'template\' must be a number between 1 and 8. Found \'' + tAttrs.template + '\'');
+          else if (parseInt(tAttrs.template) < 1 || parseInt(tAttrs.template) > 9) {
+            console.error('Directive Error! Attribute \'template\' must be a number between 1 and 9. Found \'' + tAttrs.template + '\'');
           }
           else {
             return 'template/ngLoader/ngLoaderTemplate' + tAttrs.template + '.html';
           }
         }
-        return 'template/ngLoader/ngLoaderTemplate1.html';
+        return 'template/ngLoader/ngLoaderTemplate9.html';
       },
       link: function(scope, elem, attrs) {
-        if (attrs.disableBackground == 'true') {
+        scope.disableBackground = scope.$eval(scope.disableBackground);
+        if (scope.disableBackground === true) {
           elem.css({
-            'background': 'rgba(240,240,240,0.25)',
+            'background': 'rgba(0,0,0,0.225)',
             'z-index': '9999'
           });
         }
-        else if (attrs.disableBackground === undefined) {}
+        else if (scope.disableBackground === undefined) {}
         else {
-          console.error('Directive Error! Attribute \'disable-background\' must be \'true\' for \'false\'. Found \'' + attrs.disableBackground + '\'');
+          console.error('Directive Error! Attribute \'disable-background\' must be \'true\' for \'false\'. Found \'' + scope.disableBackground + '\'');
         }
         var content = elem.find('div')[0];
-        $timeout(function() {
-          content.style.marginTop = -(content.offsetHeight / 2)+'px';
-          content.style.marginLeft = -(content.offsetWidth / 2)+'px';
-        });
+        var positionWatch = scope.$watch('working', function(newValue, oldValue) {
+          if (newValue === true) {
+            $timeout(function() {
+              content.style.marginTop = -(content.offsetHeight / 2)+'px';
+              content.style.marginLeft = -(content.offsetWidth / 2)+'px';
+              positionWatch();
+            });
+          }
+        })
       }
     };
 }]);
