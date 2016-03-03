@@ -1,7 +1,7 @@
 /**!
  * AngularJS Loader animation
  * @author  James Feigel <james.feigel@gmail.com>
- * @version 0.2.0
+ * @version 1.0.0
  */
 angular.module('ngLoaderTemplates', ['template/ngLoader/ngLoaderTemplate1.html', 'template/ngLoader/ngLoaderTemplate2.html', 'template/ngLoader/ngLoaderTemplate3.html', 'template/ngLoader/ngLoaderTemplate4.html', 'template/ngLoader/ngLoaderTemplate5.html', 'template/ngLoader/ngLoaderTemplate6.html', 'template/ngLoader/ngLoaderTemplate7.html', 'template/ngLoader/ngLoaderTemplate8.html', 'template/ngLoader/ngLoaderTemplate9.html']);
 
@@ -26,7 +26,8 @@ angular.module('template/ngLoader/ngLoaderTemplate1.html', []).run(['$templateCa
       "          repeatCount=\"indefinite\"/>\n" +
       "      </path>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 2px 0px;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
 }]);
@@ -47,7 +48,8 @@ angular.module('template/ngLoader/ngLoaderTemplate2.html', []).run(['$templateCa
       "          repeatCount=\"indefinite\"/>\n" +
       "      </path>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 2px 0px;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
 }]);
@@ -68,7 +70,8 @@ angular.module('template/ngLoader/ngLoaderTemplate3.html', []).run(['$templateCa
       "          repeatCount=\"indefinite\"/>\n" +
       "      </path>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 2px 0px;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
 }]);
@@ -98,7 +101,8 @@ angular.module('template/ngLoader/ngLoaderTemplate4.html', []).run(['$templateCa
       "          begin=\"0.4s\" dur=\"0.6s\" repeatCount=\"indefinite\" />       \n" +
       "      </rect>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 2px 0px;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
 }]);
@@ -128,7 +132,8 @@ angular.module('template/ngLoader/ngLoaderTemplate5.html', []).run(['$templateCa
       "          begin=\"0.4s\" dur=\"0.6s\" repeatCount=\"indefinite\" />\n" +
       "      </rect>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 2px 0px;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
 }]);
@@ -164,7 +169,8 @@ angular.module('template/ngLoader/ngLoaderTemplate6.html', []).run(['$templateCa
       "          begin=\"0.3s\" dur=\"0.6s\" repeatCount=\"indefinite\" />\n" +
       "      </rect>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 2px 0px;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
 }]);
@@ -196,7 +202,8 @@ angular.module('template/ngLoader/ngLoaderTemplate7.html', []).run(['$templateCa
       "          begin=\"0.4s\" dur=\"0.6s\" repeatCount=\"indefinite\" />\n" +
       "      </rect>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 2px 0px;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
 }]);
@@ -223,7 +230,8 @@ angular.module('template/ngLoader/ngLoaderTemplate8.html', []).run(['$templateCa
       "        <animate attributeName=\"y\" attributeType=\"XML\" values=\"10; 5; 10\" begin=\"0.3s\" dur=\"0.6s\" repeatCount=\"indefinite\" />\n" +
       "      </rect>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 2px 0px;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
 }]);
@@ -237,7 +245,8 @@ angular.module('template/ngLoader/ngLoaderTemplate9.html', []).run(['$templateCa
       "      <span class=\"bar2 bar\"></span>\n" +
       "      <span class=\"bar3 bar\"></span>\n" +
       "    </div>\n" +
-      "    <p style=\"margin: 2px 0px;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
 }]);
@@ -248,8 +257,9 @@ angular.module('ngLoader', ['ngLoaderTemplates'])
     return {
       scope: {
         working: '=',
-        message: '@',
-        disableBackground: '@'
+        progressPercentage: '=?',
+        message: '=?',
+        disableBackground: '@?'
       },
       restrict: 'AE',
       replace: true,
@@ -269,26 +279,38 @@ angular.module('ngLoader', ['ngLoaderTemplates'])
       },
       link: function(scope, elem, attrs) {
         scope.disableBackground = scope.$eval(scope.disableBackground);
+
         if (scope.disableBackground === true) {
           elem.css({
             'background': 'rgba(0,0,0,0.225)',
             'z-index': '9999'
           });
-        }
-        else if (scope.disableBackground === undefined) {}
-        else {
+        } else if (scope.disableBackground === undefined) {
+
+        } else {
           console.error('Directive Error! Attribute \'disable-background\' must be \'true\' for \'false\'. Found \'' + scope.disableBackground + '\'');
         }
+
         var content = elem.find('div')[0];
+
+        function positionLoader(watchFunction) {
+          $timeout(function() {
+            content.style.marginTop = -(content.offsetHeight / 2)+'px';
+            content.style.marginLeft = -(content.offsetWidth / 2)+'px';
+          });
+        }
+
         var positionWatch = scope.$watch('working', function(newValue, oldValue) {
           if (newValue === true) {
-            $timeout(function() {
-              content.style.marginTop = -(content.offsetHeight / 2)+'px';
-              content.style.marginLeft = -(content.offsetWidth / 2)+'px';
-              positionWatch();
-            });
+            positionLoader(positionWatch);
           }
-        })
+        });
+
+        var messageWatch = scope.$watch('message', function(newValue, oldValue) {
+          if (newValue != oldValue) {
+            positionLoader(messageWatch);
+          }
+        });
       }
     };
 }]);

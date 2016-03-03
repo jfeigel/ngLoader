@@ -1,7 +1,7 @@
 {
   "name": "ng-loaders",
   "main": "ngLoader.js",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/jfeigel/ngLoader",
   "authors": [
     "James Feigel <james.feigel@gmail.com>"

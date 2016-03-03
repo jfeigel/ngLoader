@@ -3,7 +3,7 @@ Loading animation for AngularJS
 
 Used the SVG loading animations from <a href="http://codepen.io/aurer/pen/jEGbA">this Pen</a> by <a href="http://codepen.io/aurer/">Aurer</a>.
 
-This module can be used in any version of Angular (see the Plunk below). All major browsers, except IE, are supported. Template 1, the default and now using CSS animations, is <a href="http://caniuse.com/#feat=css-animation">supported in IE10+</a> and the other templates are <a href="http://caniuse.com/#feat=svg-smil">not supported in IE</a>.
+This module can be used in any version of Angular (see the Plunk below). All major browsers, except IE, are supported. Template 9, the default and now using CSS animations, is <a href="http://caniuse.com/#feat=css-animation">supported in IE10+</a> and the other templates are <a href="http://caniuse.com/#feat=svg-smil">not supported in IE</a>.
 
 
 ##### 1. Install the module via bower.
@@ -35,10 +35,10 @@ OR
 ##### 5. Add the loader in your view and ensure the corresponding scope variable is defined
 ```HTML
 <loader
-	working="scopeVariable"
+	working="scopeWorkingVariable"
 	disable-background="true"
-	message="Loading..."
-	template="1">
+	message="scopeMessageVariable"
+	template="9">
 </loader>
 ```
 
@@ -49,6 +49,7 @@ Set your scope variable to true before the request and in the `finally` conditio
 Example plunk can be found <a href="http://plnkr.co/edit/IooEvgf5azTAzDULLLEJ?p=preview">here</a>.
 ```JavaScript
 $scope.working = true;
+$scope.message = 'Loading...'
 $http.get('<api endpoint>').then(
 	function(success) {
 		console.log('Success! ' + success);
