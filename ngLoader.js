@@ -26,7 +26,7 @@ angular.module('template/ngLoader/ngLoaderTemplate1.html', []).run(['$templateCa
       "          repeatCount=\"indefinite\"/>\n" +
       "      </path>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind-html=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
       "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
@@ -48,7 +48,7 @@ angular.module('template/ngLoader/ngLoaderTemplate2.html', []).run(['$templateCa
       "          repeatCount=\"indefinite\"/>\n" +
       "      </path>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind-html=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
       "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
@@ -70,7 +70,7 @@ angular.module('template/ngLoader/ngLoaderTemplate3.html', []).run(['$templateCa
       "          repeatCount=\"indefinite\"/>\n" +
       "      </path>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind-html=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
       "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
@@ -101,7 +101,7 @@ angular.module('template/ngLoader/ngLoaderTemplate4.html', []).run(['$templateCa
       "          begin=\"0.4s\" dur=\"0.6s\" repeatCount=\"indefinite\" />       \n" +
       "      </rect>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind-html=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
       "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
@@ -132,7 +132,7 @@ angular.module('template/ngLoader/ngLoaderTemplate5.html', []).run(['$templateCa
       "          begin=\"0.4s\" dur=\"0.6s\" repeatCount=\"indefinite\" />\n" +
       "      </rect>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind-html=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
       "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
@@ -169,7 +169,7 @@ angular.module('template/ngLoader/ngLoaderTemplate6.html', []).run(['$templateCa
       "          begin=\"0.3s\" dur=\"0.6s\" repeatCount=\"indefinite\" />\n" +
       "      </rect>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind-html=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
       "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
@@ -202,7 +202,7 @@ angular.module('template/ngLoader/ngLoaderTemplate7.html', []).run(['$templateCa
       "          begin=\"0.4s\" dur=\"0.6s\" repeatCount=\"indefinite\" />\n" +
       "      </rect>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind-html=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
       "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
@@ -230,7 +230,7 @@ angular.module('template/ngLoader/ngLoaderTemplate8.html', []).run(['$templateCa
       "        <animate attributeName=\"y\" attributeType=\"XML\" values=\"10; 5; 10\" begin=\"0.3s\" dur=\"0.6s\" repeatCount=\"indefinite\" />\n" +
       "      </rect>\n" +
       "    </svg>\n" +
-      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind-html=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
       "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
@@ -245,7 +245,7 @@ angular.module('template/ngLoader/ngLoaderTemplate9.html', []).run(['$templateCa
       "      <span class=\"bar2 bar\"></span>\n" +
       "      <span class=\"bar3 bar\"></span>\n" +
       "    </div>\n" +
-      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
+      "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind-html=\"message\" data-ng-cloak data-ng-show=\"message\"></p>\n" +
       "    <p style=\"margin: 5px 0 -5px;color: #ccc;\" data-ng-bind=\"progressPercentage + '%'\" data-ng-cloak data-ng-show=\"progressPercentage !== undefined && progressPercentage !== null\"></p>\n" +
       "  </div>\n" +
       "</div>");
